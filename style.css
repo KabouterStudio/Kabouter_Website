@@ -5,8 +5,12 @@
    body {
     background-color: rgb(193,56,66);
     color: white;
-    font-family: arial,Verdana, helvetica, serif;
-    font-size: 18px;
+    .yomogi-regular {
+  font-family: "Yomogi", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
   }
   
   h1 {
