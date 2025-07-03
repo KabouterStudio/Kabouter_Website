@@ -1,40 +1,15 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | kabouterWebsite</title>
+  <link rel="stylesheet" href="style.css">
+    <title>Studio Kabouter</title>
   </head>
-  <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <canvas id="unity-canvas" width=960 height=600 tabindex="-1" style="width: 960px; height: 600px; background: #231F20"></canvas>
-    <script src="Build/Kabouter_Website.loader.js"></script>
-    <script>
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
 
-        var canvas = document.querySelector("#unity-canvas");
-        canvas.style.width = "100%";
-        canvas.style.height = "100%";
-        canvas.style.position = "fixed";
+  <body>
+    <h1>Studio Kabouter</h1>
+<p>welkom in het kabouterbos </p> 
+<iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/3690445"><a href="https://studiokabouter.itch.io/kabouter">Kabouter by Laurens</a></iframe>
 
-        document.body.style.textAlign = "left";
-      }
-
-      createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/Kabouter_Website.data.gz",
-        frameworkUrl: "Build/Kabouter_Website.framework.js.gz",
-        codeUrl: "Build/Kabouter_Website.wasm.gz",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "kabouterWebsite",
-        productVersion: "0.1",
-        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-      });
-    </script>
+<img src="Images/Kabouter_Logo_Kleur.svg">
   </body>
 </html>
