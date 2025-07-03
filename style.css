@@ -5,11 +5,10 @@
    body {
     background-color: rgb(193,56,66);
     color: white;
-    .yomogi-regular {
-  font-family: "Yomogi", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
+    font-family: "Yomogi", Arial, Helvetica, sans-serif, cursive;
+    font-weight: 400;
+    font-style: normal;
+
 
   }
   
