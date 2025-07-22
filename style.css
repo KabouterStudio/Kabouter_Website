@@ -78,7 +78,8 @@
   height: 60px;  /* Pas aan op basis van je afbeelding */
   border: none;
   cursor: pointer;
-  padding: 0; /* Geen padding bij afbeelding */
+  padding: 0%; /* Geen padding bij afbeelding */
+  margin: 60%;
    z-index: 3;
 }
 
@@ -86,7 +87,7 @@
 .dropdown {
   position: relative;
   display: inline-block;
-  z-index: 3;
+  z-index: 8;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -96,7 +97,9 @@
   background-color: #f0e3b9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 3;
+  z-index: 8;
+  top: 60px;  
+  left: 0;
 }
 
 /* Links inside the dropdown */
@@ -105,7 +108,7 @@
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  z-index: 3;
+  z-index: 8;
 }
 
 /* Change color of dropdown links on hover */
