@@ -1,17 +1,73 @@
 /* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    }
 
-   body {
+   body,html {
+    height: 100%;
+    width: 100%;
     background-color: rgb(193,56,66);
     color: white;
     font-family: "Yomogi", Arial, Helvetica, sans-serif, cursive;
     font-weight: 400;
     font-style: normal;
+    z-index: 1;
   }
 
-  /* Dropdown Button */
+  .frame {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgb(158, 44, 52); /* roodachtige rand */
+  overflow-x: hidden;
+}
+
+.frame::before {
+  content: '';
+  position: absolute;
+ top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: rgb(193,56,66);
+  z-index: 1;
+}
+
+
+.cutout {
+  position: absolute;
+  width: clamp(30px, 6vw, 200px);  /* min 30px, ideaal 6% van viewport, max 60px */
+  height: clamp(30px, 6vw, 200px);
+  background-color: rgb(158, 44, 52);
+  z-index: 2;
+}
+
+.top-left {
+  top: 30px;
+  left: 30px;
+}
+
+.top-right {
+  top: 30px;
+  right: 30px;
+}
+
+.bottom-left {
+  bottom: 30px;
+  left: 30px;
+}
+
+.bottom-right {
+  bottom: 30px;
+  right: 30px;
+}
+
 .dropbtn {
+ position: relative;
   background-color: transparent;
   background-image: url('Images/Menu_Normal.svg');
   background-size: cover;
@@ -23,12 +79,14 @@
   border: none;
   cursor: pointer;
   padding: 0; /* Geen padding bij afbeelding */
+   z-index: 3;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
+  z-index: 3;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -38,7 +96,7 @@
   background-color: #f0e3b9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 3;
 }
 
 /* Links inside the dropdown */
@@ -47,6 +105,7 @@
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  z-index: 3;
 }
 
 /* Change color of dropdown links on hover */
@@ -58,25 +117,32 @@
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-image: url('Images/Menu_Hover.svg');}
 
-  
-  h1 {
+h1 {
+ position: relative;
       font-size: 60px;
       text-align: center;
       margin: 20px;
       padding: 20px;
+      z-index: 3;
   }
   
   p {
+   position: relative;
       text-align: center;
+      z-index: 3;
   }
   .game {
+   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
   img{
+   position: relative;
       display: block;
       margin: auto;
       max-width: 25%;
-      max-height: 25%
+      max-height: 25%;
+      z-index: 5;
   }
