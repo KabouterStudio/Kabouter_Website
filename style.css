@@ -46,25 +46,7 @@
   z-index: 2;
 }
 
-.top-left {
-  top: 30px;
-  left: 30px;
-}
 
-.top-right {
-  top: 30px;
-  right: 30px;
-}
-
-.bottom-left {
-  bottom: 30px;
-  left: 30px;
-}
-
-.bottom-right {
-  bottom: 30px;
-  right: 30px;
-}
 
 .dropbtn {
  position: relative;
@@ -163,11 +145,4 @@ h1 {
   z-index: 5;
 }
 
-  img{
-   position: relative;
-      display: block;
-      margin: auto;
-      max-width: 75%;
-      max-height: 75%;
-      z-index: 5;
-  }
+  
