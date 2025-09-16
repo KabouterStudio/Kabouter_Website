@@ -78,12 +78,13 @@
 
 h1 {
  position: relative;
-      font-size: 60px;
+      font-size: 80px;
+      
       text-align: center;
       margin: 20px;
       padding: 20px;
       z-index: 3;
-
+      margin-bottom: 25px;
       opacity: 0;
       transform: translateY(-150px);
   
@@ -175,15 +176,30 @@ h1 {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+  position: relative; /* nodig voor pseudo-element */
   text-align: center;
 }
 
 .contentBlock {
-  width: 100%;
-  max-width: 400px; /* ✅ Beperk max breedte */
-  margin: 0 auto;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 40%;
 }
+
+.aboutRow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 👈 Centreert perfect */
+  height: 60%;
+  width: 3px;
+  background-color: #ffffff; /* of jouw gewenste kleur */
+  z-index: 15; /* zorg dat hij achter de content blijft */
+}
+
 
 .titel {
   font-size: 24px;
