@@ -424,6 +424,7 @@ h1 {
   height: 45px;
   transition: transform 0.2s ease, opacity 0.2s ease;
   cursor: pointer;
+  display: block;
 }
 
 .social-icons img:hover {
