@@ -20,6 +20,9 @@ const imageLibraries = {
   ],
    Laurens: [
     "images/LaurensBoullion/pic1.png",
+    "images/LaurensBoullion/pic2.png",
+    "images/LaurensBoullion/pic3.png",
+    "images/LaurensBoullion/pic4.png",
   ]
 
 };
