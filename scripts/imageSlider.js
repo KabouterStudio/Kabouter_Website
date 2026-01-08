@@ -13,7 +13,13 @@ const imageLibraries = {
     "images/WishieWashie/Afbeelding02.png",
     "images/WishieWashie/Afbeelding03.png",
     "images/WishieWashie/Afbeelding04.png"
+  ],
+  Piss: [
+    "images/Piss/pic2.png",
+    "images/Piss/pic1.png",
   ]
+
+
 };
 
 // ✅ Slider class per project/instantie
@@ -61,4 +67,5 @@ class ImageSlider {
 window.addEventListener("DOMContentLoaded", () => {
   new ImageSlider("Draaiproject", "draaiSlider");
   new ImageSlider("WishieWashie", "wishieSlider");
+  new ImageSlider("Piss", "PissSlider");
 });
