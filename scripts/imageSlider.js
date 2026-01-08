@@ -17,8 +17,10 @@ const imageLibraries = {
   Piss: [
     "images/Piss/pic2.png",
     "images/Piss/pic1.png",
+  ],
+   Laurens: [
+    "images/LaurensBoullion/pic1.png",
   ]
-
 
 };
 
@@ -68,4 +70,5 @@ window.addEventListener("DOMContentLoaded", () => {
   new ImageSlider("Draaiproject", "draaiSlider");
   new ImageSlider("WishieWashie", "wishieSlider");
   new ImageSlider("Piss", "PissSlider");
+  new ImageSlider("Laurens", "LaurensSlider");
 });

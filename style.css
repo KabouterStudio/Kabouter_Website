@@ -286,7 +286,8 @@ h1 {
 /* Titels */
 .draaititel h2,
 .wishieTitel h2,
-.pissTitle h2 {
+.pissTitle h2,
+.LaurensTitle h2 {
   font-size: 36px;
   text-align: left;
   color: #ffffff;
@@ -306,14 +307,16 @@ h1 {
 
 .draaititel a,
 .wishieTitel a,
-.pissTitle a {
+.pissTitle a,
+.LaurensTitle a {
   color: inherit;
   text-decoration: none;
 }
 
 .draaititel a:hover,
 .wishieTitel a:hover,
-.pissTitle a:hover {
+.pissTitle a:hover,
+.LaurensTitle a:hover {
   font-size: 40px;
   color: #dfec94;
 }
@@ -321,7 +324,8 @@ h1 {
 /* Rijen */
 .draaiRow,
 .WishieRow,
-.pissRow {
+.pissRow,
+.LaurensRow {
   display: flex;
   align-items: flex-start; /* Belangrijk: blokken bovenaan uitlijnen */
   justify-content: space-between;
@@ -352,6 +356,13 @@ h1 {
   animation: slideInFromRight 0.5s ease-out forwards;
 }
 
+.LaurensRow {
+  margin-top: 50px;        /* Gelijk aan draaiRow */
+  margin-bottom: 0;        /* Gelijk aan draaiRow */
+  flex-direction: row-reverse;
+  animation: slideInFromLeft 0.5s ease-out forwards;
+}
+
 /* Tekst */
 .tekstblok1,
 .tekstblok2,
@@ -380,7 +391,8 @@ h1 {
 /* Afbeeldingen */
 .imageblok,
 .imagewishie,
-.imagepiss {
+.imagepiss,
+.imageLaurens {
   flex-basis: 35%;
   max-width: 100%;
   position: relative;
@@ -389,7 +401,8 @@ h1 {
 /* Slider wrapper */
 .wishieslider,
 .image-slider,
-.pissSlider {
+.pissSlider,
+.LaurensSlider {
   width: 500px;
   height: 400px;
   position: relative;
@@ -664,32 +677,10 @@ h1 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   .draaiRow,
   .WishieRow,
-  .pissRow {
+  .pissRow,
+  .LaurensRow {
     flex-direction: column;
     align-items: center;
     gap: 30px;
@@ -697,19 +688,22 @@ h1 {
 
   .infoblok,
   .WishieRow .infoblok,
-  .pissRow .infoblok {
+  .pissRow .infoblok,
+  .LaurensRow .infoblok {
     max-width: 100%;
   }
 
   .imageblok,
   .imagewishie,
-  .imagepiss {
+  .imagepiss,
+  .imageLaurens {
     max-width: 100%;
   }
 
   .image-slider,
   .wishieslider,
-  .pissSlider {
+  .pissSlider,
+  .LaurensSlider {
     width: 100%;
     max-width: 400px;
     height: auto;
