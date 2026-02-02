@@ -1,6 +1,7 @@
 
 const imageLibraries = {
   Draaiproject: [
+    "images/Draaiproject/1SocialsBanner.png",
     "images/Draaiproject/Zuigbuis.png",
     "images/Draaiproject/Draai.png",
     "images/Draaiproject/Koe.png",
@@ -8,21 +9,26 @@ const imageLibraries = {
     "images/Draaiproject/Werp.png",
     "images/Draaiproject/Ufo.png"
   ],
-  WishieWashie: [
-    "images/WishieWashie/Afbeelding01.png",
+  WishieWashie: [ 
     "images/WishieWashie/Afbeelding02.png",
     "images/WishieWashie/Afbeelding03.png",
-    "images/WishieWashie/Afbeelding04.png"
+    "images/WishieWashie/Afbeelding04.png",
+    "images/WishieWashie/Afbeelding05.png",
   ],
   Piss: [
     "images/Piss/pic2.png",
     "images/Piss/pic1.png",
   ],
    Laurens: [
-    "images/LaurensBoullion/pic1.png",
     "images/LaurensBoullion/pic2.png",
+    "images/LaurensBoullion/pic1.png",
     "images/LaurensBoullion/pic3.png",
     "images/LaurensBoullion/pic4.png",
+  ],
+  Spawn: [
+    "images/SpawnPoint/pic1.png",
+    "images/SpawnPoint/pic2.png",
+    "images/SpawnPoint/pic3.png",
   ]
 
 };
@@ -74,4 +80,5 @@ window.addEventListener("DOMContentLoaded", () => {
   new ImageSlider("WishieWashie", "wishieSlider");
   new ImageSlider("Piss", "PissSlider");
   new ImageSlider("Laurens", "LaurensSlider");
+  new ImageSlider("Spawn", "SpawnSlider");
 });
