@@ -10,7 +10,7 @@
     width: 100%;
     background-color: var(--background-color);
     color: white;
-    font-family: "Yomogi", Arial, Helvetica, sans-serif, cursive;
+    font-family: "Darumadrop One","Yomogi", Arial, Helvetica, sans-serif, cursive;
     font-weight: 400;
     font-style: normal;
     z-index: 1;
@@ -222,8 +222,8 @@ h1 {
 
 .titel {
   margin-top: 50px;
-  font-size: 38px;
-  text-decoration: underline;
+  font-size: 42px;
+  text-decoration: none;
   margin-bottom: 20px;
   width: 100%;
   text-align: center;
@@ -550,6 +550,222 @@ h1 {
     margin-bottom: 250px;
 }
 
+
+
+/* test */ 
+/*color codes bgr= playbutt=#FF85B0 prototype=#85FF85 website=85EDFF gamejam=FFA885 released=C43535 educational=55F2E2 graphic design=5579F2  */
+.testsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+    
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+
+}
+
+.testsContainer .TestWrapper {
+    width: 100%;
+    padding: 0;
+
+}
+
+.testsContainer .testRow {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+.TestWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+
+}
+
+.TestWrapper:hover .testRow {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.testRow {
+    width: 100%;
+    max-width: 350px;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+     position: relative;
+    padding-bottom: 70px;
+}
+
+.testImage {
+    width: 100%;
+    height: 25%;
+    min-height: 180px;
+    max-height: 280px;
+    overflow: hidden;
+}
+
+.testImage img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testTitle {
+    padding: 24px 30px 30px;
+}
+
+.testTitle h2 {
+    margin: 0 0 8px;
+}
+
+.testTitle h2 {
+    color: #301934;
+    position: relative;
+    font-size: 2rem;
+    z-index: 2;
+    display: inline-block;
+    transition: transform 0.2s ease;
+    transform-origin: left center;
+}
+
+
+.testTekst p,
+.testTekst2 p {
+    color: #301934;
+    margin: 0 0 16px;
+    line-height: 1.6;
+}
+
+.testType{
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    padding: 3px 6px;
+    background-color: #85FF85;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transform: scale(0.9);
+}
+
+.WebType{
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    padding: 3px 6px;
+    background-color: #85EDFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transform: scale(0.9);
+}
+
+.JamType{
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    padding: 3px 6px;
+    background-color: #FFA885;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transform: scale(0.9);
+}
+
+.EduType{
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    padding: 3px 6px;
+    background-color: #55F2E2;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transform: scale(0.9);
+}
+
+.testType,.WebType,.JamType,.EduType h4 {
+    color: #00000;
+    font-size: 0.5 rem;
+    font-weight: normal;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    transition: transform 0.2s ease;
+    transform-origin: left center;
+}
+
+.PlayButt {
+     position: absolute;
+    left: 20px;
+    bottom: 20px;
+
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    padding: 12px 24px;
+    background-color: #FF85B0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.PlayButt h4,a {
+    color: #301934;
+    font-size: 1rem;
+    font-weight: normal;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    transition: transform 0.2s ease;
+    transform-origin: left center;
+
+}
+.PlayButt:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+.padd {
+    padding-bottom: 50px;
+}
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .TestWrapper {
+        padding: 20px 12px;
+    }
+
+    .testTitle {
+        padding: 20px;
+    }
+
+    .testImage {
+        min-height: 140px;
+    }
+}
+
+
 /* Animations */
 
 @keyframes slideInFromTop {
@@ -586,6 +802,11 @@ h1 {
     
   }
 }
+
+
+
+
+
 
 @media (max-width: 768px) {
 
