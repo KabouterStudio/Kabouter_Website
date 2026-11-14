@@ -21,9 +21,10 @@ class ModelViewer {
 		// Setup ---------------------------------------
 		this.timePrev = 0
 		this.canvas = canvas
+		this.showLoadError = this.showLoadError.bind(this)
 		this.canvas.dataset.path = this.canvas.dataset.path || './3Dmodels/Test/model.glb'
 		this.setRenderer()
-		this.loadModel(this.canvas.dataset.path).catch(this.showLoadError).then(()=>{
+		this.loadModel(this.canvas.dataset.path).catch((error) => this.showLoadError(error)).then(()=>{
 
 			this.calculateBounds()
 			this.setDefaults(this.canvas.dataset)
@@ -79,6 +80,12 @@ class ModelViewer {
 		const gltf = await new GLTFLoader().loadAsync(path)
 		this.model = gltf.scene
 		this.scene.add(this.model)
+	}
+
+	showLoadError(error) {
+		console.error('ModelViewer: failed to load model', error)
+		this.canvas.style.background = '#f8d7da'
+		this.canvas.title = error?.message || 'Model failed to load'
 	}
 
 	calculateBounds() {
@@ -175,8 +182,8 @@ class ModelViewer {
 		this.materials = {}
 		ModelViewer.allPasses.forEach(pass => this.materials[pass] = [])
 
-		
-		uvmap.flipY = false // gltf standard, needed for each texture loaded manually
+		const uvmap = createCheckerTexture(64)
+		uvmap.flipY = false
 		uvmap.wrapS = THREE.RepeatWrapping
 		uvmap.wrapT = THREE.RepeatWrapping
 		uvmap.magFilter = THREE.NearestFilter
@@ -494,6 +501,25 @@ function recursiveMapOnObject(obj, func) {
 			func(key, value)
 		}
 	}
+}
+
+function createCheckerTexture(size = 64) {
+	const canvas = document.createElement('canvas')
+	canvas.width = size
+	canvas.height = size
+	const ctx = canvas.getContext('2d')
+	const dark = '#666666'
+	const light = '#d9d9d9'
+	for (let y = 0; y < size; y++) {
+		for (let x = 0; x < size; x++) {
+			ctx.fillStyle = (x + y) % 2 === 0 ? light : dark
+			ctx.fillRect(x, y, 1, 1)
+		}
+	}
+	const texture = new THREE.CanvasTexture(canvas)
+	texture.colorSpace = THREE.SRGBColorSpace
+	texture.needsUpdate = true
+	return texture
 }
 
 window.modelViewers = []
