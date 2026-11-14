@@ -64,8 +64,8 @@ import {
 	VectorKeyframeTrack,
 	SRGBColorSpace,
 	InstancedBufferAttribute
-} from './extras/three.module.js';
-import { toTrianglesDrawMode } from './extras/BufferGeometryUtils.js';
+} from './three.modules.js';
+import { toTrianglesDrawMode } from './BufferGeometryUtils.js';
 
 class GLTFLoader extends Loader {
 
@@ -4743,5 +4743,3 @@ function addPrimitiveAttributes( geometry, primitiveDef, parser ) {
 	} );
 
 }
-
-export { GLTFLoader };
