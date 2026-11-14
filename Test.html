@@ -6,43 +6,43 @@
     <meta name="google-site-verification" content="erVc4y7Xp5YVL_0Zw2VAhN3i4zPzAh51nrZET-6Dj_w" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio kabouters fun and floppy projects</title>
-    <link rel="icon" href="/favicon.png" type="image/png">
-    
+    <link rel="icon" href="./favicon.png" type="image/png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./3dViewer.css">
   </head>
   <body>
     <div class="frame">
-
-
-
-
-
-<div class="Graphicdesign">
-    <div class="ImageRow">
-
-        <div class="ImageColumn">
-
+      <div class="Graphicdesign">
+        <div class="ImageRow">
+          <div class="ImageColumn">
             <div class="imagebox">
-
-                <div class="textbox">
-                    <div class="imageText">
-                                <h5>
-                                    Dit is een afbeelding
-                                </h5>
-                    </div>				
-			    </div>
-                			
-			</div>
-            
+              <div class="textbox">
+                <div class="imageText">
+                  <h5>Dit is een afbeelding</h5>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
+      <div class="viewer-shell" style="max-width: 900px; margin: 2rem auto;">
+        <canvas
+          class="modelViewer"
+          data-path="./3Dmodels/Test/piano.glb"
+          data-aspect="1"
+          data-backgroundColor="#EEE"
+          data-groundColor="#C0C0C0"
+          width="800"
+          height="600"
+        ></canvas>
+      </div>
     </div>
-</div>
 
-
-
-</div>
+    <script type="module" src="./scripts/ModelViewer.js"></script>
+  </body>
+</html>

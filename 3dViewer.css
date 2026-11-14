@@ -1,0 +1,66 @@
+.mvwrapper {
+	position: relative;
+}
+.mvwrapper canvas {
+	display: block;
+	width: 100%;
+	background-color: #EEE;
+	cursor: grab;
+}
+.mvwrapper canvas, .mvwrapper .options {
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	touch-action: none; /* disable navigation interactions */
+}
+.mvwrapper .options {
+	position: absolute;
+	left: 0.5rem;
+	right: 0.5rem;
+	top: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	opacity: 0.6;
+}
+
+.mvwrapper .options select {
+	color: black;
+	background-color: rgba(255, 255, 255, 0.5);
+	border: 1px solid transparent;
+	border-radius: 4px;
+	height: 2rem;
+}
+.mvwrapper .options label {
+	font-size: 0.8rem;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+.mvwrapper .options select:hover,
+.mvwrapper .options label:hover {
+	border: 1px solid rgba(0,0,0,0.3);
+}
+
+.mvwrapper .rotationSwitch input {
+  display: none;
+}
+.mvwrapper .rotationSwitch {
+	display: inline-block;
+	vertical-align:middle;
+	background: url("rotate.png") no-repeat left center, rgba(255, 255, 255, 0.5);
+	background-size: 60% 60%;
+	background-position: center;
+	width: 2rem;
+	height: 2rem;
+	opacity: 0.5;
+	margin-top: 0.05rem;
+}
+.mvwrapper .rotationSwitch:has(> input:checked) {
+	opacity: 1;
+}
+
+@media (min-width: 38em) {
+	.mvwrapper canvas {
+		border-radius: 8px;
+	}
+}
