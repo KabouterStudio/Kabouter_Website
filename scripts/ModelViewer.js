@@ -22,7 +22,7 @@ class ModelViewer {
 		this.timePrev = 0
 		this.canvas = canvas
 		this.showLoadError = this.showLoadError.bind(this)
-		this.canvas.dataset.path = this.canvas.dataset.path || './3Dmodels/Test/model.glb'
+		this.canvas.dataset.path = this.canvas.dataset.path || './3Dmodels/Test/piano.glb'
 		this.setRenderer()
 		this.loadModel(this.canvas.dataset.path).catch((error) => this.showLoadError(error)).then(()=>{
 
